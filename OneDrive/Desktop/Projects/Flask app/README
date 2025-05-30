@@ -14,9 +14,43 @@ Features
 - Dockerized deployment
 - Automated rollback on failure
 
-Setup
 
-1. Clone this repo
-2. Set up Jenkins (locally or Docker)
-3. Configure webhook in GitHub
-4. Run Jenkins pipeline using `Jenkinsfile`
+
+
+///JENKINS Setup///
+
+Pipeline setup
+
+1)Go to Manage Jenkins > Plugin Manager
+
+Install:
+Git plugin
+GitHub plugin
+Pipeline plugin
+
+2)Create a Jenkins Pipeline Job
+
+Go to Jenkins dashboard > New Item
+Name it (e.g., flask-ci-cd)
+Choose "Pipeline"
+
+3)Configure the Pipeline
+
+Paste the given scipt from the above file.
+Enable GitHub Webhook Trigger
+Scroll to Build Triggers
+Check mark for GitHub hook trigger for GITScm polling
+
+
+///GitHub Setup///
+
+
+1)Add Jenkins Webhook to GitHub
+
+Go to your GitHub repo > Settings > Webhooks
+Click "Add webhook"
+Payload URL: http://<your-jenkins-ip>:8080/github-webhook/
+Content Type: application/json
+Select: Just the push event
+Mark"Add webhook"
+
