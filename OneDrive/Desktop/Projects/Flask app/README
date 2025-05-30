@@ -1,0 +1,22 @@
+FLask App CI/CD Pipeline
+
+This project implements a real-time CI/CD pipeline using Jenkins, Docker, and GitHub webhooks. It enables automated deployment with rollback capabilities.
+
+Tools Used
+
+- Jenkins
+- GitHub
+- Docker
+
+Features
+
+- Auto build on code push using GitHub Webhooks
+- Dockerized deployment
+- Automated rollback on failure
+
+Setup
+
+1. Clone this repo
+2. Set up Jenkins (locally or Docker)
+3. Configure webhook in GitHub
+4. Run Jenkins pipeline using `Jenkinsfile`
