@@ -1,0 +1,34 @@
+BootInfoS
+
+This script collects and displays key system information like CPU usage, memory stats, disk space, uptime, and top memory-consuming processes.
+
+Features
+
+- CPU usage snapshot
+- RAM and swap info in MB
+- Disk space of `/` in human-readable format
+- Logged-in users count
+- Uptime display
+- Top 10 memory-consuming processes
+
+1. Clone the repo or copy the script:
+
+git clone https://github.com/your-username/BootInfoS.git
+
+cd BootInfoS
+
+2. Make the script executable:
+
+chmod +x sysinfo.bash
+
+3. Run the script:
+
+./sysinfo.bash
+
+4. To run this every time you open a new terminal, add this line to the end of your ~/.bashrc file:
+
+~/BootInfoS/sysinfo.bash
+
+5. Then apply the changes
+
+source ~/.bashrc
